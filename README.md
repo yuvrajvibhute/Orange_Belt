@@ -12,7 +12,7 @@ A simple, fast, and beautifully designed mini-dApp built to check Ethereum addre
 ## Live Demo & Links 🔗
 - **Live Demo Link:** *https://orangebelt1-git-main-yuvraj-vibhutes-projects.vercel.app/*
 - **Demo Video Link:** *[Insert Video Demo Link]*
-- **Test Output Screenshot:** *[Insert Screenshot Link or See attached]*
+- **Test Output Screenshot:** *(/Ss.png )*
 
 ## Getting Started 🛠️
 
