@@ -10,7 +10,7 @@ A simple, fast, and beautifully designed mini-dApp built to check Ethereum addre
 - **Modern Aesthetics:** Glassmorphism UI elements, smooth gradients, and fully responsive design.
 
 ## Live Demo & Links 🔗
-- **Live Demo Link:** *[Insert Vercel / Netlify Link Here]*
+- **Live Demo Link:** *https://orangebelt1-git-main-yuvraj-vibhutes-projects.vercel.app/*
 - **Demo Video Link:** *[Insert Video Demo Link]*
 - **Test Output Screenshot:** *[Insert Screenshot Link or See attached]*
 
