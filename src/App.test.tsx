@@ -137,3 +137,15 @@ describe('App — Watchlist Tab', () => {
     );
   });
 });
+
+describe('App — Transfer Tab', () => {
+  it('renders Transfer tab with Freighter wallet CTA', async () => {
+    render(<App />);
+    fireEvent.click(screen.getByTestId('transfer-tab-btn'));
+    
+    await waitFor(() => {
+      expect(screen.getByText('Fund Transfer')).toBeInTheDocument();
+      expect(screen.getByTestId('connect-wallet-btn')).toHaveTextContent(/Connect Freighter/i);
+    });
+  });
+});
