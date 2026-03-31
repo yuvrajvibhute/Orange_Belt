@@ -1,6 +1,6 @@
 # Balance Checker (Rust/Soroban)
 
-This is a Rust equivalent of the `BalanceChecker.sol` smart contract, written using the Soroban SDK for the Stellar network. It provides equivalent functionality for fetching single or multiple balances.
+This is a Rust smart contract, written using the Soroban SDK for the Stellar network. It provides equivalent functionality for fetching single or multiple balances.
 
 ## Prerequisites
 Since Rust (`cargo`) is currently not installed or not in your PATH, you will need to install it to compile this smart contract.
@@ -22,7 +22,7 @@ cargo build --target wasm32-unknown-unknown --release
 ```
 
 ## Functional Mapping
-| Solidity (BalanceChecker.sol) | Rust / Soroban equivalent (lib.rs) |
+| Previous Interface | Rust / Soroban equivalent (lib.rs) |
 | --- | --- |
 | `getBalance(address)` | `get_balance(env, token_address, account)` |
 | `getBalances(address[])` | `get_balances(env, token_address, accounts)` |

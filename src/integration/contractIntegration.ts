@@ -5,7 +5,7 @@
  * Provides typed wrappers around ethers.js calls so the UI never touches raw
  * contract ABI details directly.
  *
- * CONTRACT: contracts/BalanceChecker.sol  (deploy to any EVM-compatible network)
+ * CONTRACT: BalanceChecker interface
  */
 
 import { ethers, type Provider } from 'ethers';
@@ -75,8 +75,7 @@ export const NETWORKS: Record<NetworkKey, NetworkConfig> = {
 };
 
 // ---------------------------------------------------------------------------
-// Contract address – replace with the deployed address after you run:
-//   npx hardhat run scripts/deploy.js --network <network>
+// Contract address – replace with the deployed address:
 // ---------------------------------------------------------------------------
 export const BALANCE_CHECKER_ADDRESS =
   '0x0000000000000000000000000000000000000000'; // TODO: set after deployment

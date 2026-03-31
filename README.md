@@ -27,8 +27,7 @@ A feature-rich decentralized portfolio tracker built on Ethereum. Go far beyond 
 
 ```
 Orange_belt/
-├── contracts/
-│   └── BalanceChecker.sol              # Solidity contract — single + batch balance queries
+│   └── rust_contracts/                 # Rust Soroban smart contracts
 ├── src/
 │   ├── integration/
 │   │   └── contractIntegration.ts      # Contract ↔ Frontend bridge (ENS, networks, ABI)
@@ -50,13 +49,13 @@ Orange_belt/
 
 ## Smart Contract 📄
 
-`contracts/BalanceChecker.sol` — Solidity ^0.8.20, view-only (zero gas cost for users):
+`rust_contracts/balance_checker` — Rust (Soroban) contract:
 
 | Function | Description |
 |---|---|
-| `getBalance(address)` | Single address ETH balance |
-| `getBalances(address[])` | **Batch** — returns balances for many addresses in one call |
-| `getMyBalance()` | Returns the caller's own balance |
+| `get_balance` | Single account balance |
+| `get_balances` | **Batch** — returns balances for many accounts in one call |
+| `get_my_balance` | Returns the caller's own balance |
 
 ## Integration Layer 🔗
 
@@ -92,7 +91,7 @@ npm run test
 
 ### Deploying the Contract (Optional)
 
-1. Deploy `contracts/BalanceChecker.sol` on any EVM network.
+1. Deploy the Rust contract from `rust_contracts/balance_checker`.
 2. Set the deployed address in `src/integration/contractIntegration.ts`:
    ```ts
    export const BALANCE_CHECKER_ADDRESS = '0xYourDeployedAddress';
@@ -104,7 +103,7 @@ The app will use the contract for all balance queries automatically.
 | Layer | Technology |
 |---|---|
 | Frontend | React 19 + TypeScript, Vite |
-| Smart Contract | Solidity ^0.8.20 |
+| Smart Contract | Rust (Soroban) |
 | Blockchain | ethers.js v6 |
 | Price Data | CoinGecko Public API |
 | Testing | Vitest, @testing-library/react |
